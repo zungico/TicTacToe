@@ -11,8 +11,8 @@
 		806DFFF42A0736E600EDED4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806DFFF32A0736E600EDED4D /* AppDelegate.swift */; };
 		806DFFF62A0736E600EDED4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806DFFF52A0736E600EDED4D /* SceneDelegate.swift */; };
 		806DFFFD2A0736E800EDED4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 806DFFFC2A0736E800EDED4D /* Assets.xcassets */; };
-		8086C9662A0AE3E200896178 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8086C9652A0AE3E200896178 /* BoardView.swift */; };
-		8086C9682A0AE3E900896178 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8086C9672A0AE3E900896178 /* BoardViewController.swift */; };
+		8086C9662A0AE3E200896178 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8086C9652A0AE3E200896178 /* PlayView.swift */; };
+		8086C9682A0AE3E900896178 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8086C9672A0AE3E900896178 /* PlayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +22,8 @@
 		806DFFF52A0736E600EDED4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		806DFFFC2A0736E800EDED4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		806DFFFF2A0736E800EDED4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8086C9652A0AE3E200896178 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
-		8086C9672A0AE3E900896178 /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		8086C9652A0AE3E200896178 /* PlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		8086C9672A0AE3E900896178 /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +85,8 @@
 		80803CF92A0B1E4E00621917 /* Board Module */ = {
 			isa = PBXGroup;
 			children = (
-				8086C9672A0AE3E900896178 /* BoardViewController.swift */,
-				8086C9652A0AE3E200896178 /* BoardView.swift */,
+				8086C9672A0AE3E900896178 /* PlayViewController.swift */,
+				8086C9652A0AE3E200896178 /* PlayView.swift */,
 			);
 			path = "Board Module";
 			sourceTree = "<group>";
@@ -161,10 +161,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8086C9662A0AE3E200896178 /* BoardView.swift in Sources */,
+				8086C9662A0AE3E200896178 /* PlayView.swift in Sources */,
 				806DFFF42A0736E600EDED4D /* AppDelegate.swift in Sources */,
 				806DFFF62A0736E600EDED4D /* SceneDelegate.swift in Sources */,
-				8086C9682A0AE3E900896178 /* BoardViewController.swift in Sources */,
+				8086C9682A0AE3E900896178 /* PlayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

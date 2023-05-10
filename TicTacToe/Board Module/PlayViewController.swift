@@ -7,10 +7,10 @@
 
 import UIKit
 
-class BoardViewController: UIViewController {
+class PlayViewController: UIViewController {
     
     override func loadView() {
-        self.view = BoardView(frame: UIScreen.main.bounds)
+        self.view = PlayView(frame: UIScreen.main.bounds)
     }
 
     override func viewDidLoad() {

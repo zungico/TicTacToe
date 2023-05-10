@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BoardView: UIView {
+class PlayView: UIView {
     
     //MARK: - Properties
     
@@ -34,12 +34,12 @@ class BoardView: UIView {
     //MARK: - Create Board
 
     func createBoard() {
-        let sizeButton = self.frame.width/CGFloat(boardSize)
+        let sizeButton = (self.frame.width/CGFloat(boardSize))
         for i in 0...boardSize-1 {
             for j in 0...boardSize-1 {
                 let button = UIButton(type: .system)
                 button.frame.size = CGSize(width: sizeButton, height: sizeButton)
-                button.frame.origin = CGPoint(x: CGFloat(j)*sizeButton,
+                button.frame.origin = CGPoint(x:  CGFloat(j)*sizeButton,
                                               y: self.frame.height*0.2 + CGFloat(i)*sizeButton)
                 button.layer.borderColor = UIColor.black.cgColor
                 button.layer.borderWidth = 4
@@ -67,18 +67,9 @@ class BoardView: UIView {
         sender.setTitle(letter, for: .normal)
         sender.setTitleColor(color, for: .normal)
         sender.isEnabled = false
-//        print (checkWin(location: sender.tag))
         print(checkRows())
         
     }
-    
-    
-//    func checkWin (location: Int) -> Bool {
-////        return checkHorizontally(location: location, x: 1)
-////        checkVertically(location: location, x: boardSize) ||
-////        checkDiagonally(location: location, x: boardSize-1) ||
-////        checkDiagonally(location: location, x: boardSize+1)
-//    }
     
     func alert (message: String) {
         let alertController = UIAlertController(title: "WIN", message: message, preferredStyle: .alert)
@@ -86,22 +77,34 @@ class BoardView: UIView {
     }
     
     func checkRows() -> Bool {
-        // Check horizontal rows
+        // Check horizontally
         for i in 0..<boardSize {
             if checkRow(row: i * boardSize, length: boardSize) {
                 return true
             }
         }
         
-        // Check vertical columns
+        // Check vertically
         for i in 0..<boardSize {
             if checkRow(row: i, length: boardSize, step: boardSize) {
                 return true
             }
         }
         
+        // Check diagonal top-left to bottom-right
+        if checkRow(row: 0, length: boardSize, step: boardSize+1) {
+            return true
+        }
+        
+        // Check diagonal bottom-left to top-right
+        if checkRow(row: boardSize-1, length: boardSize, step: boardSize-1) {
+            return true
+        }
+        
         return false
     }
+
+
 
     func checkRow(row: Int, length: Int, step: Int = 1) -> Bool {
         var countX = 0
