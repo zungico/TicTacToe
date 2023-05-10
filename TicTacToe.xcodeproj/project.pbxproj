@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		806D00012A0736E800EDED4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		806D00012A0736E800EDED4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "TicTacToe/Resоurces/Info.plist"; sourceTree = SOURCE_ROOT; };
 		806DFFF02A0736E600EDED4D /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		806DFFF32A0736E600EDED4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		806DFFF52A0736E600EDED4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,15 +56,39 @@
 		806DFFF22A0736E600EDED4D /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
-				806DFFF32A0736E600EDED4D /* AppDelegate.swift */,
-				806DFFF52A0736E600EDED4D /* SceneDelegate.swift */,
-				8086C9672A0AE3E900896178 /* BoardViewController.swift */,
-				8086C9652A0AE3E200896178 /* BoardView.swift */,
+				80803CF82A0B1E4100621917 /* Application */,
+				80803CF92A0B1E4E00621917 /* Board Module */,
+				80803CF62A0B1D9200621917 /* Resоurces */,
+			);
+			path = TicTacToe;
+			sourceTree = "<group>";
+		};
+		80803CF62A0B1D9200621917 /* Resоurces */ = {
+			isa = PBXGroup;
+			children = (
 				806DFFFC2A0736E800EDED4D /* Assets.xcassets */,
 				806DFFFE2A0736E800EDED4D /* LaunchScreen.storyboard */,
 				806D00012A0736E800EDED4D /* Info.plist */,
 			);
-			path = TicTacToe;
+			path = "Resоurces";
+			sourceTree = "<group>";
+		};
+		80803CF82A0B1E4100621917 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				806DFFF32A0736E600EDED4D /* AppDelegate.swift */,
+				806DFFF52A0736E600EDED4D /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		80803CF92A0B1E4E00621917 /* Board Module */ = {
+			isa = PBXGroup;
+			children = (
+				8086C9672A0AE3E900896178 /* BoardViewController.swift */,
+				8086C9652A0AE3E200896178 /* BoardView.swift */,
+			);
+			path = "Board Module";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +304,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TicTacToe/Info.plist;
+				INFOPLIST_FILE = "TicTacToe/Resоurces/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
@@ -307,7 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TicTacToe/Info.plist;
+				INFOPLIST_FILE = "TicTacToe/Resоurces/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
