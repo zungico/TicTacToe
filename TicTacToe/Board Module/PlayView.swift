@@ -35,12 +35,14 @@ class PlayView: UIView {
 
     func createBoard() {
         let sizeButton = (self.frame.width/CGFloat(boardSize))
+        let spacing: CGFloat = 10
+        
         for i in 0...boardSize-1 {
             for j in 0...boardSize-1 {
                 let button = UIButton(type: .system)
                 button.frame.size = CGSize(width: sizeButton, height: sizeButton)
-                button.frame.origin = CGPoint(x:  CGFloat(j)*sizeButton,
-                                              y: self.frame.height*0.2 + CGFloat(i)*sizeButton)
+                button.frame.origin = CGPoint(x: CGFloat(j)*sizeButton + spacing*CGFloat(j+1),
+                                              y: self.frame.height*0.2 + CGFloat(i)*sizeButton + spacing*CGFloat(i+1))
                 button.layer.borderColor = UIColor.black.cgColor
                 button.layer.borderWidth = 4
                 button.titleLabel?.font = UIFont.systemFont(ofSize: sizeButton/2)
@@ -79,25 +81,25 @@ class PlayView: UIView {
     func checkRows() -> Bool {
         // Check horizontally
         for i in 0..<boardSize {
-            if checkRow(row: i * boardSize, length: boardSize) {
+            if checkRow(row: i * boardSize) {
                 return true
             }
         }
         
         // Check vertically
         for i in 0..<boardSize {
-            if checkRow(row: i, length: boardSize, step: boardSize) {
+            if checkRow(row: i, step: boardSize) {
                 return true
             }
         }
         
         // Check diagonal top-left to bottom-right
-        if checkRow(row: 0, length: boardSize, step: boardSize+1) {
+        if checkRow(row: 0, step: boardSize+1) {
             return true
         }
         
         // Check diagonal bottom-left to top-right
-        if checkRow(row: boardSize-1, length: boardSize, step: boardSize-1) {
+        if checkRow(row: boardSize-1, step: boardSize-1) {
             return true
         }
         
@@ -106,11 +108,11 @@ class PlayView: UIView {
 
 
 
-    func checkRow(row: Int, length: Int, step: Int = 1) -> Bool {
+    func checkRow(row: Int, step: Int = 1) -> Bool {
         var countX = 0
         var countO = 0
         
-        for i in 0..<length {
+        for i in 0..<boardSize {
             let index = row + i * step
             let title = buttonArray[index].titleLabel?.text
             
@@ -121,7 +123,7 @@ class PlayView: UIView {
             }
         }
         
-        return countX == length || countO == length
+        return countX == boardSize || countO == boardSize
     }
 
 
